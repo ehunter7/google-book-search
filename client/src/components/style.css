@@ -1,0 +1,25 @@
+.header {
+    margin-top:20px;
+    border: solid 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.header-content {
+    font-size: 1.5em;
+}
+
+.book-search {
+    margin-top: 20px;
+    border: solid 2px;
+    border-radius: 5px;
+    
+}
+
+.book-input {
+    width: 100%;
+}
+
+.search-button {
+    margin-left: auto;
+}
