@@ -23,3 +23,13 @@
 .search-button {
     margin-left: auto;
 }
+
+.book-card{
+    display: flex;
+
+text-overflow: clip;
+}
+
+.more-button {
+    border-style: none;
+}

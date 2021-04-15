@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import API from "../API";
 
-const BookSearch = () => {
-  const [book, setBook] = useState();
+const BookSearch = ({ setBooks }) => {
+  const [search, setSearch] = useState();
 
   const getBook = () => {
-    API.search(book).then((res) => {
-      console.log(res.data.items[0]);
+    API.search(search).then((res) => {
+      console.log(res.data.items);
+      setBooks(res.data.items);
     });
   };
 
@@ -15,15 +16,14 @@ const BookSearch = () => {
       <p className="search-title">Book Search</p>
       <form>
         {/* <div> */}
-        <label htmlFor="book">Book</label>
+        <label htmlFor="search">Book</label>
         {/* </div> */}
         <input
-          id="book"
+          id="search"
           className="book-input"
           placeholder="Enter Book"
           onChange={(event) => {
-            setBook(event.target.value);
-            console.log(book);
+            setSearch(event.target.value);
           }}
         />
 

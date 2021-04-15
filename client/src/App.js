@@ -18,7 +18,6 @@ function App() {
           <Saved />
         </Route>
       </div>
-      S
     </Router>
   );
 }
