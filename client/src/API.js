@@ -6,4 +6,18 @@ export default {
 
     return axios.get(URL);
   },
+
+  addNewBook: (data) => {
+
+    return axios.post("/books/saveBook", data);
+  },
+
+  getSavedBooks: () => {
+    return axios.get("/books/getBooks");
+  },
+
+  deleteBook: ( id ) => {
+return axios.delete("/books/deleteBook", {data: {id: id}});
+  },
+
 };

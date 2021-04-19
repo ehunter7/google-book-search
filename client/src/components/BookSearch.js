@@ -6,7 +6,7 @@ const BookSearch = ({ setBooks }) => {
 
   const getBook = () => {
     API.search(search).then((res) => {
-      console.log(res.data.items);
+
       setBooks(res.data.items);
     });
   };

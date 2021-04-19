@@ -4,11 +4,13 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
+const routes = require("./routes");
+
 require("dotenv").config();
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -17,10 +19,14 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to mongoose
 mongoose.connect(
-  `mongodb+srv://ehunter:${DBPASSWORD}}@cluster0.d2o6s.mongodb.net/booksDB`
+  process.env.MONGODB_URI,
 );
 
-app.use("/", require("./routes/booksRoute"));
+mongoose.connection.on("connected", () =>{
+  console.log('Connected to Mongoose');
+})
+
+app.use(routes);
 
 // Define API routes here
 

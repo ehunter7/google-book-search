@@ -8,6 +8,7 @@ const Search = () => {
   return (
     <div className="search-page">
       <BookSearch setBooks={setBooks} />
+      <div className="container">
       {books.map((book) => {
         return (
           <BookCard
@@ -18,6 +19,7 @@ const Search = () => {
           />
         );
       })}
+      </div>
     </div>
   );
 };

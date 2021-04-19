@@ -13,7 +13,7 @@
     margin-top: 20px;
     border: solid 2px;
     border-radius: 5px;
-    
+    margin-bottom: 5em;
 }
 
 .book-input {
@@ -25,11 +25,69 @@
 }
 
 .book-card{
+    /* display: flex; */
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
+    border-radius: 10px;
+    margin-bottom: 2.5em;
+    width: 95%;
+}
+
+
+.book-image {
+    width: auto;
+    margin-right: 5em;
+    margin-left: 5em;
+    margin-bottom: 1em;
+
+}
+
+.image {
+    width: 8em;
+    height: 12em;
+}
+
+.book-info {
+ margin-top: 2em;
+display: inline-block;
+width: 50%;
+}
+
+.element {
     display: flex;
 
-text-overflow: clip;
+}
+
+.book-title {
+    margin-left: 2.5em;
+
+}
+
+.book-author {
+    margin-left: 1.25em;
 }
 
 .more-button {
     border-style: none;
+}
+
+.show-book-description:hover {
+    cursor: pointer;
+
+}
+
+.book-desc {
+    padding: 2em;
+}
+.button-div {
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.save-button {
+    height: 8em;
+    width: 8em;
+    font-size: 1.5em;
+    border-style: none;
+    border: solid 2px black;
 }
